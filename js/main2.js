@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // Get the window displayed in the iframe.
     // Get a reference to the 'Send Message' button.
-  /*  var btn = document.getElementById('btn-send');
+    var btn = document.getElementById('btn-send');
 
     // A function to handle sending messages.
     function sendMessage(e) {
@@ -15,14 +15,7 @@ $(document).ready(function () {
 
     // Add an event listener that will execute the sendMessage() function
     // when the send button is clicked.
-    btn.addEventListener('click', sendMessage);*/
-
-    window.addEventListener("message", function(ev) {
-        if (ev.data.message === "requestResult") {
-            // ev.source is the opener
-            ev.source.postMessage({ message: "deliverResult", result: true }, "*");
-        }
-    });
+    btn.addEventListener('click', sendMessage);
 
 
 });
