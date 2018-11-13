@@ -3,7 +3,17 @@ $(document).ready(function () {
     // Get a reference to the 'Send Message' button.
     var btn = document.getElementById('btn-send');
 
-    // A function to handle sending messages.
+
+    window.addEventListener('message', function(e) {
+        if (event.origin !== "http://aper.test:1084")
+            return;
+        var message = e.data;
+        $('#receiver').text(message);
+        addEventListener('click', sendMessage);
+
+    }, false);
+
+
     function sendMessage(e) {
         // Prevent any default browser behaviour.
         e.preventDefault();
