@@ -8,6 +8,7 @@ $(document).ready(function () {
         if (event.origin !== "http://aper.test:1084")
             return;
         var message = e.data;
+        console.log(message);
         $('#receiver').text(message);
         addEventListener('click', sendMessage);
 
