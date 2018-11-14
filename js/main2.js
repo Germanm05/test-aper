@@ -10,7 +10,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         // Send a message with the text 'Hello Treehouse!' to the receiver window.
-        window.opener.postMessage(JSON.stringify({ 'newMessage': 'Mensaje desde Ventana!' }), ORIGIN);
+        window.parent.postMessage(JSON.stringify({ 'newMessage': 'Mensaje desde Ventana!' }), ORIGIN);
         window.close()
     }
 
