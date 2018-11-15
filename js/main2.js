@@ -4,7 +4,7 @@ $(document).ready(function () {
     var btn = document.getElementById('btn-send');
 
     //var ORIGIN = "http://aper.test:1084";https://gmuriel05.github.io
-    var ORIGIN = "https://germanm05.github.io";
+    var ORIGIN = "https://gmuriel05.github.io";
 
     function sendMessage(e) {
         // Prevent any default browser behaviour.
